@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+   
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+          <b class="bachira">
+           
+             <span>Ba<span class="chira">chira</span></span>
+          </b>
+        </div>
+        <div class="navbar-item">
+            <button class="home" id="navigateButton3">Home</button>
+          <div class="shopping-now">Products</div>
+          <div class="shopping-now">Categories</div>
+          <div class="shopping-now">Brands</div>
+          <div class="shopping-now">Pricing</div>
+        </div>
+        <div class="cta-button" >
+            <button  id="navigateButton2">Login</button>
+            <div class="register" id="navigateButton">
+              <div class="shopping-now hover" >Register</div>
+            </div>
+          </div>
+      </div>
+    <div style="margin-left: 35%; margin-top: 120px;">
+       
+       
+       
+           
+            
+     
+        
+          
+        <div class="row">
+            <div class="col-6">
+                <span style="color:grey;">Email Adress</span>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group" id="inputGroup-sizing"></span>
+                    <input type="text" class="form-control" style="height: 50px;">
+                </div>
+            </div>
+            
+        </div>
+        <div class="row" >
+            <div class="col-6">
+                <span style="color: grey;">Password</span>
+                <div class="input-group input-group-sm mb-3">
+                  <span class="input-group" id="inputGroup-sizing"></span>
+                  <input type="password" class="form-control" style="height: 50px;" id="password" oninput="validatePassword()">
+                </div>
+                <p id="passwordMessage" style="color: red;"></p>
+              </div>
+            <label>
+        <input type="checkbox" style="height: 20px; width:20px; margin-top: 20px;">
+        Add me to the BACHIRA mailing list
+      </label>
+      <span style="font-size: 10px; margin-top: 30px; margin-bottom: 30px;">By continuing, you confirm that you have read and accept the Terms and Conditions. and the Privacy Policy.</span>
+        </div>
+        
+        <button class="btn btn-primary" type="submit" style="width: 50%;">Register</button>
+       
+    </div>
+    
+        
+    <script src="https://kit.fontawesome.com/f81574c403.js" crossorigin="anonymous" style="margin-top: 50px;"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+            let navigateButton = document.getElementById("navigateButton");
+    
+      
+    navigateButton.addEventListener("click", function() {
+      
+      window.location.href = "page.html";
+    });
+    // Get reference to the button
+let navigateButton2 = document.getElementById("navigateButton2");
+
+// Add event listener to the button
+navigateButton2.addEventListener("click", function() {
+
+window.location.href = "blank.html";
+});
+let navigateButton3 = document.getElementById("navigateButton3");
+
+// Add event listener to the button
+navigateButton3.addEventListener("click", function() {
+
+  window.location.href = "index2.html";
+});
+function validatePassword() {
+    let passwordInput = document.getElementById('password');
+    let passwordMessage = document.getElementById('passwordMessage');
+    
+    // Regular expressions for password validation
+    let hasUpperCase = /[A-Z]/.test(passwordInput.value);
+    let hasNumber = /\d/.test(passwordInput.value);
+    let hasMinLength = passwordInput.value.length >= 8;
+
+    // Check if all conditions are met
+    if (hasUpperCase && hasNumber && hasMinLength) {
+      passwordMessage.textContent = 'Password is valid';
+      passwordMessage.style.color = 'green';
+    } else {
+      passwordMessage.textContent = 'Password must include at least one uppercase letter, one number, and be at least 8 characters long';
+      passwordMessage.style.color = 'red';
+    }
+  }
+    </script>
+</body>
+</html>
