@@ -209,6 +209,15 @@ height: 34.875rem;
     justify-content: center;
     font-size: var(--font-size-xl);
   }
+  button {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      color: black; /* Set the color of the text */
+      
+    }
   .product {
     position: absolute;
     top: 132rem;
@@ -536,6 +545,38 @@ transition: 0.5s;
     border-radius: 30px;
   }
 
+  .navbar {
+      overflow: hidden;
+     background-color: grey;
+      position: fixed; /* Make the navbar fixed at the top */
+      top: 0; /* Align the navbar to the top of the viewport */
+      
+      z-index: 1000; /* Set a high z-index to ensure it appears above other content */
+    }
+
+    /* Style for the navigation bar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the color of links on hover */
+    .navbar a:hover {
+     
+      color: white;
+    }
+    .navbar {
+    overflow: hidden;
+    background-color: white; /* Change this line to set the background color to grey */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
   @media only screen and (max-width: 500px) {
 
 
@@ -741,6 +782,15 @@ height: 130px;
     justify-content: center;
     font-size: var(--font-size-xl);
   }
+  button {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      color: black; /* Set the color of the text */
+      
+    }
   .product {
     position: absolute;
     top: 525px;
@@ -1068,7 +1118,37 @@ transition: 0.5s;
   .card-1-child{
     border-radius: 10px;
   }
+  .navbar {
+      overflow: hidden;
+     background-color: grey;
+      position: fixed; /* Make the navbar fixed at the top */
+      top: 0; /* Align the navbar to the top of the viewport */
+      
+      z-index: 1000; /* Set a high z-index to ensure it appears above other content */
+    }
 
+    /* Style for the navigation bar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the color of links on hover */
+    .navbar a:hover {
+     
+      color: white;
+    }
+    .navbar {
+    overflow: hidden;
+    background-color: white; /* Change this line to set the background color to grey */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
 
 
   }
@@ -1113,16 +1193,16 @@ transition: 0.5s;
           </b>
         </div>
         <div class="navbar-item">
-          <div class="home">Home</div>
+          <button class="home" id="navigateButton3">Home</button>
           <div class="shopping-now">Products</div>
           <div class="shopping-now">Categories</div>
           <div class="shopping-now">Brands</div>
           <div class="shopping-now">Pricing</div>
         </div>
-        <div class="cta-button">
-          <div class="shopping-now">Login</div>
-          <div class="register">
-            <div class="shopping-now hover" >Register</div>
+        <div class="cta-button" >
+          <button  id="navigateButton2">Login</button>
+          <div class="register" id="navigateButton">
+            <button class="shopping-now hover" >Register</button>
           </div>
         </div>
       </div>
@@ -1360,5 +1440,32 @@ transition: 0.5s;
         </div>
       </div>
     </div>
+    <script>
+      
+      let navigateButton = document.getElementById("navigateButton");
+    
+      
+      navigateButton.addEventListener("click", function() {
+        
+        window.location.href = "page.html";
+      });
+      // Get reference to the button
+let navigateButton2 = document.getElementById("navigateButton2");
+
+// Add event listener to the button
+navigateButton2.addEventListener("click", function() {
+
+  window.location.href = "blank.html";
+});
+ // Get reference to the button
+ let navigateButton3 = document.getElementById("navigateButton3");
+
+// Add event listener to the button
+navigateButton3.addEventListener("click", function() {
+
+  window.location.href = "index2.html";
+});
+
+    </script>
   </body>
 </html>
